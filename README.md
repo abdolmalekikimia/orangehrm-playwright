@@ -6,7 +6,7 @@ A runnable public QA demonstration using Python, Pytest and Playwright against t
 
 Requirements: Python 3.11+, Google Chrome installed, an internet connection and access to the public demo.
 
-**Windows:** download/unzip the repository and double-click `run-demo.cmd`. It creates a local virtual environment, installs dependencies, opens Google Chrome so you can watch the tests, and opens the HTML report afterward. Install Python with the Python launcher (`py`) enabled first.
+**Windows:** download/unzip the repository and double-click `run-demo.cmd`. It creates a local virtual environment, installs dependencies, opens Google Chrome so you can watch the tests, and opens the HTML report afterward. The launcher detects Python 3.11+ via `py`, `python`, a standard Windows installation, or the bundled Codex runtime when present. To use another installation, set `ORANGEHRM_PYTHON` to its `python.exe` path. A bundled Codex runtime is optional; recruiters can use a normal Python installation.
 
 **macOS / Linux:**
 
@@ -50,4 +50,5 @@ The demo displays the public credentials `Admin` / `admin123`. Optional environm
 The **Live demo tests** workflow runs on pushes and pull requests, or manually from **Actions → Live demo tests → Run workflow**. Download the `orangehrm-report` artifact to inspect the report.
 
 This is an external shared demo: downtime, changed credentials, rate limits or UI changes can cause genuine failures. Tests fail visibly rather than silently skip or retry into a green result. Passing this suite demonstrates the listed demo behaviors, not production OrangeHRM correctness or complete HR workflow coverage.
+
 
