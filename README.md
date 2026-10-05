@@ -51,4 +51,10 @@ The **Live demo tests** workflow runs on pushes and pull requests, or manually f
 
 This is an external shared demo: downtime, changed credentials, rate limits or UI changes can cause genuine failures. Tests fail visibly rather than silently skip or retry into a green result. Passing this suite demonstrates the listed demo behaviors, not production OrangeHRM correctness or complete HR workflow coverage.
 
+## Full scenario plan (planned coverage)
 
+Browse the [English test scenario plan](docs/test-plan/README.md): **323 scenarios** across all 12 main modules, organized into 15 topic pages with linked indexes, prerequisites, steps/test data and expected outcomes. It includes form validation, boundary cases, workflow transitions, authorization, failure handling and cross-module consistency.
+
+Only the **10 existing cases** are currently automated. The other **313 scenarios are a planned backlog**, not implemented or executed coverage. The plan separates read-only public-demo checks from tests requiring an isolated instance and synthetic data; destructive maintenance requires a disposable instance.
+
+Use the [CSV catalog](docs/test-plan/scenario-catalog.csv) for filtering/import, or the [JSON catalog](docs/test-plan/scenario-catalog.json) for tooling. Shared-demo execution remains the existing read-only suite; this documentation does not add test implementations.
