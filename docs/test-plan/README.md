@@ -1,5 +1,7 @@
 # OrangeHRM Test Scenario Plan
 
+For the portfolio navigation view, browse the [Test Scenario Wiki](https://github.com/abdolmalekikimia/orangehrm-playwright/wiki). These files and catalogs remain the editable source with the same scenario IDs.
+
 **323 scenarios across all 12 main modules. 10 automated cases; 313 planned scenarios.**
 
 > This is the planned test scope, not a claim of completed automation or full product validation. The current runnable suite remains the 10 login/session/navigation cases described in the project README.

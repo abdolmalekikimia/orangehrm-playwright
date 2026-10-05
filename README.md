@@ -1,60 +1,47 @@
-# OrangeHRM Playwright Demo
+# OrangeHRM Playwright QA Portfolio
 
-A runnable public QA demonstration using Python, Pytest and Playwright against the public OrangeHRM demo. This project is separate from private company test suites. Implementation is AI-assisted and reviewed through live execution.
+[![Live demo tests](https://github.com/abdolmalekikimia/orangehrm-playwright/actions/workflows/checks.yml/badge.svg)](https://github.com/abdolmalekikimia/orangehrm-playwright/actions/workflows/checks.yml)
 
-## Quick start for recruiters
+A runnable public QA portfolio using Python, Pytest and Playwright against the OrangeHRM demo. Implementation is AI-assisted and reviewed through live execution; this project is separate from private company test suites.
 
-Requirements: Python 3.11+, Google Chrome installed, an internet connection and access to the public demo.
+## Tech stack
 
-**Windows:** download/unzip the repository and double-click `run-demo.cmd`. It creates a local virtual environment, installs dependencies, opens Google Chrome so you can watch the tests, and opens the HTML report afterward. The launcher detects Python 3.11+ via `py`, `python`, a standard Windows installation, or the bundled Codex runtime when present. To use another installation, set `ORANGEHRM_PYTHON` to its `python.exe` path. A bundled Codex runtime is optional; recruiters can use a normal Python installation.
+Python 3.11+ · Pytest · Playwright · Google Chrome / Chromium · pytest-html · GitHub Actions
 
-**macOS / Linux:**
+## Scope and automation status
 
-```sh
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m pytest --headed --browser-channel chrome --slowmo 500
-```
+| Measure | Current scope |
+|---|---|
+| Test design | 323 scenarios across all 12 main modules |
+| Automated | 10 login, validation, session and navigation cases |
+| Planned | 313 scenarios awaiting implementation/execution |
 
-## Watch the tests in Google Chrome
+The current suite covers successful/invalid login, three required-field combinations, logout/session protection, unauthenticated dashboard redirection, and navigation to Admin, PIM and Directory. It does not modify employee records or shared business data.
 
-From the project folder in Windows PowerShell, after the initial setup:
+**[Browse the Test Scenario Wiki](https://github.com/abdolmalekikimia/orangehrm-playwright/wiki)** for strategy, module-specific cases, authorization/integration checks, bug-report guidance and automation coverage. [Repository Markdown and catalogs](docs/test-plan/README.md) remain available as the editable source.
 
-```powershell
-.\.venv\Scripts\python.exe -m pytest --headed --browser-channel chrome --slowmo 500
-```
+## Run in visible Google Chrome
 
-Or run the automatic setup and visible test launcher:
+Requirements: Python 3.11+, Google Chrome, internet access and a reachable public demo.
+
+From the project folder in Windows PowerShell:
 
 ```powershell
 .\run-demo.cmd
 ```
 
-Chrome opens during execution. `--headed` shows the browser; `--browser-channel chrome` selects installed Google Chrome; `--slowmo 500` adds a 500 ms delay to browser actions so they are easier to follow. Each test uses a fresh browser context; Chrome closes when the suite finishes.
+The launcher sets up a local virtual environment, opens Chrome during the tests and opens the HTML report afterward. For an existing environment:
 
-Open `reports/index.html` after the run. Failed tests retain screenshots and Playwright traces in `reports/artifacts`. Open a trace with `python -m playwright show-trace path/to/trace.zip`.
+```powershell
+.\.venv\Scripts\python.exe -m pytest --headed --browser-channel chrome --slowmo 500
+```
 
-For a faster run without a visible window, use `python -m pytest --browser-channel chrome`. GitHub Actions runs headlessly using its own Chromium installation.
+[macOS/Linux setup, Python detection and execution options](https://github.com/abdolmalekikimia/orangehrm-playwright/wiki/Test-Execution)
 
-## Coverage
+## Reports and CI
 
-10 independently isolated test cases: successful login, incorrect password, three required-field combinations, logout/session protection, unauthenticated redirect, and navigation to Admin, PIM and Directory followed by a return to Dashboard.
+- Local report: `reports/index.html`; failures retain screenshots/traces in `reports/artifacts`.
+- [Live demo tests and downloadable CI report artifacts](https://github.com/abdolmalekikimia/orangehrm-playwright/actions/workflows/checks.yml).
+- [Automation coverage and source references](https://github.com/abdolmalekikimia/orangehrm-playwright/wiki/Automation-Coverage).
 
-Tests use real browser actions and observable UI assertions; no mocked API routes or fixed sleeps. Each case receives a fresh browser context. No employee records, account settings or shared business data are changed.
-
-The demo displays the public credentials `Admin` / `admin123`. Optional environment variables `ORANGEHRM_URL`, `ORANGEHRM_USERNAME`, `ORANGEHRM_PASSWORD` override defaults; credentials must belong to a compatible test system.
-
-## GitHub execution
-
-The **Live demo tests** workflow runs on pushes and pull requests, or manually from **Actions → Live demo tests → Run workflow**. Download the `orangehrm-report` artifact to inspect the report.
-
-This is an external shared demo: downtime, changed credentials, rate limits or UI changes can cause genuine failures. Tests fail visibly rather than silently skip or retry into a green result. Passing this suite demonstrates the listed demo behaviors, not production OrangeHRM correctness or complete HR workflow coverage.
-
-## Full scenario plan (planned coverage)
-
-Browse the [English test scenario plan](docs/test-plan/README.md): **323 scenarios** across all 12 main modules, organized into 15 topic pages with linked indexes, prerequisites, steps/test data and expected outcomes. It includes form validation, boundary cases, workflow transitions, authorization, failure handling and cross-module consistency.
-
-Only the **10 existing cases** are currently automated. The other **313 scenarios are a planned backlog**, not implemented or executed coverage. The plan separates read-only public-demo checks from tests requiring an isolated instance and synthetic data; destructive maintenance requires a disposable instance.
-
-Use the [CSV catalog](docs/test-plan/scenario-catalog.csv) for filtering/import, or the [JSON catalog](docs/test-plan/scenario-catalog.json) for tooling. Shared-demo execution remains the existing read-only suite; this documentation does not add test implementations.
+The public demo uses its published `Admin` / `admin123` credentials. It is a shared external service; availability and UI changes can cause failures. Passing this suite validates the listed behaviors, not the entire 323-scenario plan. Mutating workflow/configuration tests require an isolated instance; purge requires a disposable instance.
