@@ -1,5 +1,9 @@
 # OrangeHRM Test Scenario Plan
 
+<!-- current-automation -->
+21 scenario IDs have automation: 14 with full specified scope and 7 with partial scope. They expand into 97 executable test variations; these are not 97 fully covered scenarios. The other 302 scenario IDs remain a planned backlog without automation.
+<!-- /current-automation -->
+
 For the portfolio navigation view, browse the [Test Scenario Wiki](https://github.com/abdolmalekikimia/orangehrm-playwright/wiki). These files and catalogs remain the editable source with the same scenario IDs.
 
 **323 designed scenarios: 14 automated, 7 partially automated and 302 planned; 97 executable test variations.**
@@ -63,7 +67,7 @@ Shared navigation/form/table/upload checks are in [COMMON](02-common.md). Cross-
 ## Scope and evidence rules
 
 1. This is a scenario plan and automation backlog, not evidence that every feature or combination has been tested. 323 designed scenarios: 14 automated, 7 partially automated and 302 planned; 97 executable test variations. Implementation status is separate from execution outcome.
-2. Inventory basis: read-only inspection of the public OrangeHRM OS 5.9 UI on 2026-10-05 and inspection of the two existing test files. Opening a page or menu does not establish workflow correctness.
+2. Inventory basis: read-only inspection of the public OrangeHRM OS 5.9 UI on 2026-10-05 and inspection of the current test source. Opening a page or menu does not establish workflow correctness.
 3. R: read-only, suitable for the recruiter demo. I: isolated instance with synthetic data and controlled accounts. D: disposable instance with a restorable snapshot for purge testing. No record mutation, publishing, global configuration change or purge was performed during the inventory review.
 4. P1: authentication, authorization, sensitive data, core workflows and data integrity. P2: existing navigation and secondary capabilities. Review priority against actual risk/roles; automation effort does not determine business importance.
 5. COMMON scenarios apply to every relevant page. Record a separate result for each applicable page/control; one passing example cannot represent the entire module. The scenario count is not a count of all combinations or executed coverage.
@@ -119,6 +123,6 @@ Use one result row per scenario **and applicable page/variation**:
 |---|---|---|---|---|---|---|---|---|---|
 | COMMON-007 | Page and filter under test | Target version | Test role | Run-owned IDs | Approved oracle | Observed result | Not Run / Pass / Fail / Blocked / N/A | Trace, screenshot, report or comparison | Timestamp |
 
-Automation status in this catalog means **implemented in source**, not a fresh successful live execution. Test references point to the current cases; the plan does not add test implementations.
+Automation status in this catalog means **implemented in source**, not a fresh successful live execution. Source references identify the current automated variations; consult execution reports for actual outcomes.
 
 [Back to the project README](../../README.md)

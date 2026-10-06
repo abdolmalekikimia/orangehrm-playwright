@@ -1,5 +1,9 @@
 # OrangeHRM Playwright QA Portfolio
 
+<!-- current-automation -->
+21 scenario IDs have automation: 14 with full specified scope and 7 with partial scope. They expand into 97 executable test variations; these are not 97 fully covered scenarios. The other 302 scenario IDs remain a planned backlog without automation.
+<!-- /current-automation -->
+
 [![Live demo tests](https://github.com/abdolmalekikimia/orangehrm-playwright/actions/workflows/checks.yml/badge.svg)](https://github.com/abdolmalekikimia/orangehrm-playwright/actions/workflows/checks.yml)
 
 A runnable public QA portfolio using Python, Pytest and Playwright against the OrangeHRM demo. Implementation is AI-assisted and reviewed through live execution; this project is separate from private company test suites.

@@ -1,5 +1,9 @@
 # Implementation Coverage
 
+<!-- current-automation -->
+21 scenario IDs have automation: 14 with full specified scope and 7 with partial scope. They expand into 97 executable test variations; these are not 97 fully covered scenarios. The other 302 scenario IDs remain a planned backlog without automation.
+<!-- /current-automation -->
+
 323 designed scenarios: 14 automated, 7 partially automated and 302 planned; 97 executable test variations.
 
 This table is generated from collected `scenario` markers. Full means the specified scenario scope has an implementation; partial means only the named variations are implemented. Neither means the latest run passed.
