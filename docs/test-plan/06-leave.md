@@ -1,6 +1,6 @@
 # Leave management
 
-**28 scenarios | 0 automated | 28 planned**
+**28 scenarios | 0 automated | 0 partial | 28 planned**
 
 [Plan overview](README.md) | [CSV catalog](scenario-catalog.csv) | [JSON catalog](scenario-catalog.json)
 
@@ -12,11 +12,11 @@ Apply; My Leave; Add/Employee/My Entitlements; employee/self usage reports; Leav
 
 Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
-Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](README.md) also apply. Environment codes: R = read-only demo, I = isolated instance, D = disposable instance.
+Shared controls and [evidence rules](README.md) also apply. R = read-only public demo; I = isolated instance; D = disposable instance. Partial implementations run only their documented public-demo variation, not the complete I/D workflow.
 
 ## Scenario index
 
-| ID | Scenario | Environment | Automation status |
+| ID | Scenario | Design environment | Implementation status |
 |---|---|---|---|
 | [LEAVE-001](#leave-001) | Leave Types: Create and persist | I | Planned |
 | [LEAVE-002](#leave-002) | Leave Types: Required fields and boundaries | I | Planned |
@@ -53,7 +53,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave Types: Create and persist**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -65,7 +65,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave Types: Required fields and boundaries**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -77,7 +77,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave Types: Duplicates and normalization**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -89,7 +89,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave Types: Edit and cancel**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -101,7 +101,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave Types: Delete and dependencies**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -113,7 +113,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Holidays: Create and persist**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -125,7 +125,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Holidays: Required fields and boundaries**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -137,7 +137,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Holidays: Duplicates and normalization**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -149,7 +149,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Holidays: Edit and cancel**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -161,7 +161,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Holidays: Delete and dependencies**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -173,7 +173,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave Period**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -185,7 +185,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Work Week**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -197,7 +197,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Add Entitlements: individual**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -209,7 +209,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Add Entitlements: group**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -221,7 +221,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Entitlements: invalid values and changes**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -233,7 +233,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Apply: one full day**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -245,7 +245,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Apply: multiple days and holidays**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -257,7 +257,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Apply: partial days**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -269,7 +269,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Apply: balance boundaries**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -281,7 +281,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Apply: dates and overlap**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -293,7 +293,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **My Leave: filters and cancellation**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -305,7 +305,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave List: all filters**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -317,7 +317,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave List: approve and reject**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -329,7 +329,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave List: bulk action**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -341,7 +341,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Assign Leave**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -353,7 +353,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Comments and daily details**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -365,7 +365,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Employee Entitlements and Usage Report**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 
@@ -377,7 +377,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **My Entitlements and Usage Report**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Test employee/supervisor, leave type, period, entitlements and a known work calendar; mutations occur only in isolation.
 

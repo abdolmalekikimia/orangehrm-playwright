@@ -1,6 +1,6 @@
 # Authentication and sessions
 
-**21 scenarios | 7 automated | 14 planned**
+**21 scenarios | 10 automated | 3 partial | 8 planned**
 
 [Plan overview](README.md) | [CSV catalog](scenario-catalog.csv) | [JSON catalog](scenario-catalog.json)
 
@@ -12,11 +12,11 @@ Login; Forgot Password; Change Password; Logout; direct access; account status; 
 
 For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
-Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](README.md) also apply. Environment codes: R = read-only demo, I = isolated instance, D = disposable instance.
+Shared controls and [evidence rules](README.md) also apply. R = read-only public demo; I = isolated instance; D = disposable instance. Partial implementations run only their documented public-demo variation, not the complete I/D workflow.
 
 ## Scenario index
 
-| ID | Scenario | Environment | Automation status |
+| ID | Scenario | Design environment | Implementation status |
 |---|---|---|---|
 | [AUTH-001](#auth-001) | Successful login | R | Automated |
 | [AUTH-002](#auth-002) | Invalid password | R | Automated |
@@ -25,16 +25,16 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 | [AUTH-005](#auth-005) | Empty password | R | Automated |
 | [AUTH-006](#auth-006) | Logout blocks subsequent dashboard access | R | Automated |
 | [AUTH-007](#auth-007) | Dashboard without an authenticated session | R | Automated |
-| [AUTH-008](#auth-008) | Unknown username | I | Planned |
+| [AUTH-008](#auth-008) | Unknown username | R | Automated |
 | [AUTH-009](#auth-009) | Disabled account | I | Planned |
 | [AUTH-010](#auth-010) | Characters and whitespace in credentials | I | Planned |
-| [AUTH-011](#auth-011) | Enter key and repeated submission | I | Planned |
-| [AUTH-012](#auth-012) | Forgot Password: empty input and cancellation | I | Planned |
+| [AUTH-011](#auth-011) | Enter key and repeated submission | R | Automated |
+| [AUTH-012](#auth-012) | Forgot Password: empty input and cancellation | R | Automated |
 | [AUTH-013](#auth-013) | Forgot Password: valid recovery lifecycle | I | Planned |
 | [AUTH-014](#auth-014) | Session expiration during save | I | Planned |
-| [AUTH-015](#auth-015) | Logout across browser tabs | I | Planned |
-| [AUTH-016](#auth-016) | Browser Back after logout | I | Planned |
-| [AUTH-017](#auth-017) | Direct access to all protected modules | I | Planned |
+| [AUTH-015](#auth-015) | Logout across browser tabs | I | Partial |
+| [AUTH-016](#auth-016) | Browser Back after logout | I | Partial |
+| [AUTH-017](#auth-017) | Direct access to all protected modules | I | Partial |
 | [AUTH-018](#auth-018) | Change Password: valid change | I | Planned |
 | [AUTH-019](#auth-019) | Change Password: invalid input and cancellation | I | Planned |
 | [AUTH-020](#auth-020) | Recovery for an unknown account | I | Planned |
@@ -46,7 +46,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Successful login**
 
-**Priority:** P1 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -54,13 +54,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** The dashboard opens and displays the expected heading.
 
-**Existing test reference:** `tests/test_login.py::test_successful_login[chromium]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_successful_login[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### AUTH-002
 
 **Invalid password**
 
-**Priority:** P1 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -68,13 +76,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** Invalid credentials is visible; the login page remains open.
 
-**Existing test reference:** `tests/test_login.py::test_invalid_password_stays_on_login[chromium]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_invalid_password_stays_on_login[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### AUTH-003
 
 **Both credentials empty**
 
-**Priority:** P1 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -82,13 +98,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** Two Required messages appear; authentication does not occur.
 
-**Existing test reference:** `tests/test_login.py::test_required_fields[chromium---2]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_required_fields[chromium-AUTH-003-both-empty]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### AUTH-004
 
 **Empty username**
 
-**Priority:** P1 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -96,13 +120,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** One Required message appears; authentication does not occur.
 
-**Existing test reference:** `tests/test_login.py::test_required_fields[chromium--admin123-1]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_required_fields[chromium-AUTH-004-username-empty]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### AUTH-005
 
 **Empty password**
 
-**Priority:** P1 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -110,13 +142,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** One Required message appears; authentication does not occur.
 
-**Existing test reference:** `tests/test_login.py::test_required_fields[chromium-Admin--1]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_required_fields[chromium-AUTH-005-password-empty]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### AUTH-006
 
 **Logout blocks subsequent dashboard access**
 
-**Priority:** P1 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -124,13 +164,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** The login form appears; the dashboard cannot be accessed without signing in again.
 
-**Existing test reference:** `tests/test_login.py::test_logout_blocks_dashboard[chromium]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_logout_blocks_dashboard[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### AUTH-007
 
 **Dashboard without an authenticated session**
 
-**Priority:** P1 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -138,25 +186,43 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** The browser is redirected to the login page and the Login form is visible.
 
-**Existing test reference:** `tests/test_login.py::test_unauthenticated_dashboard_redirects[chromium]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_unauthenticated_dashboard_redirects[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### AUTH-008
 
 **Unknown username**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
-**Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
+**Prerequisites:** Reachable public demo; valid published Admin credentials where authentication is required. No business-data mutation.
 
 **Steps / test data:** Enter a synthetic unknown username and any password; select Login.
 
 **Expected outcome:** Login is rejected without unnecessarily exposing account existence or sensitive details.
 
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_unknown_username_has_generic_error[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### AUTH-009
 
 **Disabled account**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -168,7 +234,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Characters and whitespace in credentials**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -180,31 +246,51 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Enter key and repeated submission**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
-**Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
+**Prerequisites:** Reachable public demo; valid published Admin credentials where authentication is required. No business-data mutation.
 
 **Steps / test data:** Authenticate using Enter; in a new session, double-click Login quickly.
 
 **Expected outcome:** A clear outcome and one valid session result; repeated submission does not lock the interface.
 
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_enter_and_repeated_login[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### AUTH-012
 
 **Forgot Password: empty input and cancellation**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
-**Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
+**Prerequisites:** Reachable public demo; valid published Admin credentials where authentication is required. No business-data mutation.
 
 **Steps / test data:** Open Forgot Password, submit an empty username, then select Cancel.
 
 **Expected outcome:** Required-field validation appears; cancellation returns to Login without creating a recovery request.
 
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_password_recovery_empty_and_cancel[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### AUTH-013
 
 **Forgot Password: valid recovery lifecycle**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -216,7 +302,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Session expiration during save**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -228,7 +314,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Logout across browser tabs**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Partially automated; remaining variations are planned
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -236,11 +322,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** The other tab cannot obtain fresh protected data or modify records using the ended session.
 
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_logout_invalidates_second_tab[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | partial | fresh protected reads in a second tab; no write attempted |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### AUTH-016
 
 **Browser Back after logout**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Partially automated; remaining variations are planned
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -248,11 +344,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** The session is not restored; fresh confidential data and protected operations remain inaccessible.
 
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_login.py::test_back_after_logout_does_not_restore_session[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_login.py) | partial | Back, Reload and protected read; no write attempted |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### AUTH-017
 
 **Direct access to all protected modules**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Partially automated; remaining variations are planned
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -260,11 +366,32 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** Every protected route requires authentication; the existing automated test covers the dashboard only.
 
+<details><summary>Implemented variations (12)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Admin]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-PIM]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | PIM protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Leave]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Time]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Recruitment]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Recruitment protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-My-Info]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | My Info protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Performance]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Performance protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Dashboard]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Dashboard protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Directory]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Directory protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Maintenance]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Maintenance protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Claim]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Claim protected entry route |
+| [`tests/test_navigation.py::test_module_entry_requires_authentication[chromium-Buzz]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Buzz protected entry route |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### AUTH-018
 
 **Change Password: valid change**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -276,7 +403,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Change Password: invalid input and cancellation**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -288,7 +415,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Recovery for an unknown account**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 
@@ -300,7 +427,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Session and request integrity**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** For R cases, the public demo must be reachable. Account/session-controlled cases require an isolated instance.
 

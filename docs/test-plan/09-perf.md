@@ -1,6 +1,6 @@
 # Performance management
 
-**19 scenarios | 0 automated | 19 planned**
+**19 scenarios | 0 automated | 0 partial | 19 planned**
 
 [Plan overview](README.md) | [CSV catalog](scenario-catalog.csv) | [JSON catalog](scenario-catalog.json)
 
@@ -12,11 +12,11 @@ KPIs; Trackers; Manage/My/Employee Reviews; My/Employee Trackers and logs.
 
 Authorized account and synthetic fixtures owned by this run.
 
-Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](README.md) also apply. Environment codes: R = read-only demo, I = isolated instance, D = disposable instance.
+Shared controls and [evidence rules](README.md) also apply. R = read-only public demo; I = isolated instance; D = disposable instance. Partial implementations run only their documented public-demo variation, not the complete I/D workflow.
 
 ## Scenario index
 
-| ID | Scenario | Environment | Automation status |
+| ID | Scenario | Design environment | Implementation status |
 |---|---|---|---|
 | [PERF-001](#perf-001) | KPIs: Create and persist | I | Planned |
 | [PERF-002](#perf-002) | KPIs: Required fields and boundaries | I | Planned |
@@ -44,7 +44,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **KPIs: Create and persist**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -56,7 +56,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **KPIs: Required fields and boundaries**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -68,7 +68,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **KPIs: Duplicates and normalization**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -80,7 +80,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **KPIs: Edit and cancel**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -92,7 +92,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **KPIs: Delete and dependencies**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -104,7 +104,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Trackers: Create and persist**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -116,7 +116,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Trackers: Required fields and boundaries**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -128,7 +128,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Trackers: Duplicates and normalization**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -140,7 +140,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Trackers: Edit and cancel**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -152,7 +152,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Trackers: Delete and dependencies**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -164,7 +164,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Manage Reviews: create**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -176,7 +176,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Review: invalid dates and references**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -188,7 +188,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Review: activate and edit**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -200,7 +200,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **My Reviews: self review**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -212,7 +212,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Review: rating boundaries and mandatory input**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -224,7 +224,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Employee Reviews: supervisor evaluation**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -236,7 +236,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Review filters**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -248,7 +248,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Tracker Logs**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -260,7 +260,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **My Trackers and Employee Trackers**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 

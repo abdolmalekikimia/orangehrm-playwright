@@ -1,6 +1,6 @@
 # Maintenance
 
-**8 scenarios | 0 automated | 8 planned**
+**8 scenarios | 1 automated | 0 partial | 7 planned**
 
 [Plan overview](README.md) | [CSV catalog](scenario-catalog.csv) | [JSON catalog](scenario-catalog.json)
 
@@ -12,13 +12,13 @@ Administrator Access was observed; post-gate Purge Employee/Candidate and Access
 
 Disposable isolated instance with a restorable snapshot; post-gate pages were not inspected in the source review.
 
-Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](README.md) also apply. Environment codes: R = read-only demo, I = isolated instance, D = disposable instance.
+Shared controls and [evidence rules](README.md) also apply. R = read-only public demo; I = isolated instance; D = disposable instance. Partial implementations run only their documented public-demo variation, not the complete I/D workflow.
 
 ## Scenario index
 
-| ID | Scenario | Environment | Automation status |
+| ID | Scenario | Design environment | Implementation status |
 |---|---|---|---|
-| [MAINT-001](#maint-001) | Administrator Access: cancellation | D | Planned |
+| [MAINT-001](#maint-001) | Administrator Access: cancellation | R | Automated |
 | [MAINT-002](#maint-002) | Administrator Access: invalid credentials | D | Planned |
 | [MAINT-003](#maint-003) | Administrator Access: authorization | D | Planned |
 | [MAINT-004](#maint-004) | Purge Employee: preview and cancellation | D | Planned |
@@ -33,19 +33,29 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Administrator Access: cancellation**
 
-**Priority:** P1 · **Environment:** D · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
-**Prerequisites:** Disposable isolated instance with a restorable snapshot; post-gate pages were not inspected in the source review.
+**Prerequisites:** Reachable public demo; valid published Admin credentials where authentication is required. No business-data mutation.
 
 **Steps / test data:** Open Maintenance and select Cancel.
 
 **Expected outcome:** Return to the previous page without changing data or executing a critical action.
 
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_navigation.py::test_maintenance_cancel_returns_to_previous_page[chromium]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### MAINT-002
 
 **Administrator Access: invalid credentials**
 
-**Priority:** P1 · **Environment:** D · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** D · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Disposable isolated instance with a restorable snapshot; post-gate pages were not inspected in the source review.
 
@@ -57,7 +67,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Administrator Access: authorization**
 
-**Priority:** P1 · **Environment:** D · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** D · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Disposable isolated instance with a restorable snapshot; post-gate pages were not inspected in the source review.
 
@@ -69,7 +79,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Purge Employee: preview and cancellation**
 
-**Priority:** P1 · **Environment:** D · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** D · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Disposable isolated instance with a restorable snapshot; post-gate pages were not inspected in the source review.
 
@@ -81,7 +91,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Purge Employee: outcome**
 
-**Priority:** P1 · **Environment:** D · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** D · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Disposable isolated instance with a restorable snapshot; post-gate pages were not inspected in the source review.
 
@@ -93,7 +103,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Purge Candidate**
 
-**Priority:** P1 · **Environment:** D · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** D · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Disposable isolated instance with a restorable snapshot; post-gate pages were not inspected in the source review.
 
@@ -105,7 +115,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Access Records**
 
-**Priority:** P1 · **Environment:** D · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** D · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Disposable isolated instance with a restorable snapshot; post-gate pages were not inspected in the source review.
 
@@ -117,7 +127,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Purge: failure and repetition**
 
-**Priority:** P1 · **Environment:** D · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** D · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Disposable isolated instance with a restorable snapshot; post-gate pages were not inspected in the source review.
 

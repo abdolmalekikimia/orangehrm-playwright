@@ -1,6 +1,6 @@
 # My Info and employee details
 
-**20 scenarios | 0 automated | 20 planned**
+**20 scenarios | 0 automated | 0 partial | 20 planned**
 
 [Plan overview](README.md) | [CSV catalog](scenario-catalog.csv) | [JSON catalog](scenario-catalog.json)
 
@@ -12,11 +12,11 @@ Personal Details; Contact Details; Emergency Contacts; Dependents; Immigration; 
 
 Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
-Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](README.md) also apply. Environment codes: R = read-only demo, I = isolated instance, D = disposable instance.
+Shared controls and [evidence rules](README.md) also apply. R = read-only public demo; I = isolated instance; D = disposable instance. Partial implementations run only their documented public-demo variation, not the complete I/D workflow.
 
 ## Scenario index
 
-| ID | Scenario | Environment | Automation status |
+| ID | Scenario | Design environment | Implementation status |
 |---|---|---|---|
 | [PROFILE-001](#profile-001) | Personal Details: identity | I | Planned |
 | [PROFILE-002](#profile-002) | Personal Details: dates | I | Planned |
@@ -45,7 +45,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Personal Details: identity**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -57,7 +57,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Personal Details: dates**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -69,7 +69,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Contact Details**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -81,7 +81,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Emergency Contacts**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -93,7 +93,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Dependents**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -105,7 +105,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Immigration**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -117,7 +117,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Job: details and contract**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -129,7 +129,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Job: termination and reactivation**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -141,7 +141,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Salary: component lifecycle**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -153,7 +153,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Salary: invalid values and bank fields**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -165,7 +165,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Report-to: supervisors and subordinates**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -177,7 +177,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Qualifications: Work Experience**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -189,7 +189,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Qualifications: Education**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -201,7 +201,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Qualifications: Skills**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -213,7 +213,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Qualifications: Languages**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -225,7 +225,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Qualifications: Licenses**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -237,7 +237,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Memberships**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -249,7 +249,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Custom Fields: Blood Type and other fields**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -261,7 +261,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Attachments: full lifecycle**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 
@@ -273,7 +273,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **ESS profile permissions**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Two synthetic employees with Admin and ESS accounts; use PIM for administrative edits and My Info for self-service.
 

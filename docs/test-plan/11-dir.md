@@ -1,6 +1,6 @@
 # Employee Directory
 
-**5 scenarios | 0 automated | 5 planned**
+**5 scenarios | 0 automated | 0 partial | 5 planned**
 
 [Plan overview](README.md) | [CSV catalog](scenario-catalog.csv) | [JSON catalog](scenario-catalog.json)
 
@@ -12,11 +12,11 @@ Employee Name; Job Title; Location; cards/details; pagination and profile consis
 
 Authorized account and synthetic fixtures owned by this run.
 
-Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](README.md) also apply. Environment codes: R = read-only demo, I = isolated instance, D = disposable instance.
+Shared controls and [evidence rules](README.md) also apply. R = read-only public demo; I = isolated instance; D = disposable instance. Partial implementations run only their documented public-demo variation, not the complete I/D workflow.
 
 ## Scenario index
 
-| ID | Scenario | Environment | Automation status |
+| ID | Scenario | Design environment | Implementation status |
 |---|---|---|---|
 | [DIR-001](#dir-001) | Directory: all filters | I | Planned |
 | [DIR-002](#dir-002) | Directory: cards and details | I | Planned |
@@ -30,7 +30,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Directory: all filters**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -42,7 +42,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Directory: cards and details**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -54,7 +54,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Directory: counts and pagination**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -66,7 +66,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Directory: profile changes**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 
@@ -78,7 +78,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Directory: permissions**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account and synthetic fixtures owned by this run.
 

@@ -1,6 +1,6 @@
 # Authorization and cross-module integrity
 
-**10 scenarios | 0 automated | 10 planned**
+**10 scenarios | 0 automated | 0 partial | 10 planned**
 
 [Plan overview](README.md) | [CSV catalog](scenario-catalog.csv) | [JSON catalog](scenario-catalog.json)
 
@@ -12,11 +12,11 @@ Admin/ESS/Supervisor permissions; page and operation access; linked workflows an
 
 Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
-Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](README.md) also apply. Environment codes: R = read-only demo, I = isolated instance, D = disposable instance.
+Shared controls and [evidence rules](README.md) also apply. R = read-only public demo; I = isolated instance; D = disposable instance. Partial implementations run only their documented public-demo variation, not the complete I/D workflow.
 
 ## Scenario index
 
-| ID | Scenario | Environment | Automation status |
+| ID | Scenario | Design environment | Implementation status |
 |---|---|---|---|
 | [RBAC-001](#rbac-001) | Page and operation authorization | I | Planned |
 | [RBAC-002](#rbac-002) | Another employee's ID | I | Planned |
@@ -35,7 +35,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Page and operation authorization**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
@@ -47,7 +47,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Another employee's ID**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
@@ -59,7 +59,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Role and supervisor changes**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
@@ -71,7 +71,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Employee-to-Directory workflow**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
@@ -83,7 +83,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Leave-to-Dashboard workflow**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
@@ -95,7 +95,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Project-to-Report workflow**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
@@ -107,7 +107,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Recruitment-to-Employee workflow**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
@@ -119,7 +119,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Claim-to-Decision workflow**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
@@ -131,7 +131,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Termination across modules**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 
@@ -143,7 +143,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Master-data integrity**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Independent synthetic accounts and an approved authorization policy; the public Admin account alone cannot establish RBAC coverage.
 

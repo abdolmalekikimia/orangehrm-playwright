@@ -1,0 +1,450 @@
+{
+  "observed_on": "2026-10-06",
+  "modules": [
+    {
+      "module": "Admin",
+      "entry": "/admin/viewAdminModule",
+      "path_regex": "/admin/viewSystemUsers",
+      "heading": "System Users"
+    },
+    {
+      "module": "PIM",
+      "entry": "/pim/viewPimModule",
+      "path_regex": "/pim/viewEmployeeList",
+      "heading": "Employee Information"
+    },
+    {
+      "module": "Leave",
+      "entry": "/leave/viewLeaveModule",
+      "path_regex": "/leave/viewLeaveList",
+      "heading": "Leave List"
+    },
+    {
+      "module": "Time",
+      "entry": "/time/viewTimeModule",
+      "path_regex": "/time/viewEmployeeTimesheet",
+      "heading": "Select Employee"
+    },
+    {
+      "module": "Recruitment",
+      "entry": "/recruitment/viewRecruitmentModule",
+      "path_regex": "/recruitment/viewCandidates",
+      "heading": "Candidates"
+    },
+    {
+      "module": "My Info",
+      "entry": "/pim/viewMyDetails",
+      "path_regex": "/pim/viewPersonalDetails/empNumber/[0-9]+",
+      "heading": "Personal Details"
+    },
+    {
+      "module": "Performance",
+      "entry": "/performance/viewPerformanceModule",
+      "path_regex": "/performance/searchEvaluatePerformanceReview",
+      "heading": "Employee Reviews"
+    },
+    {
+      "module": "Dashboard",
+      "entry": "/dashboard/index",
+      "path_regex": "/dashboard/index",
+      "text": "Time at Work"
+    },
+    {
+      "module": "Directory",
+      "entry": "/directory/viewDirectory",
+      "path_regex": "/directory/viewDirectory",
+      "heading": "Directory"
+    },
+    {
+      "module": "Maintenance",
+      "entry": "/maintenance/viewMaintenanceModule",
+      "path_regex": "/maintenance/purgeEmployee",
+      "heading": "Administrator Access"
+    },
+    {
+      "module": "Claim",
+      "entry": "/claim/viewClaimModule",
+      "path_regex": "/claim/viewAssignClaim",
+      "heading": "Employee Claims"
+    },
+    {
+      "module": "Buzz",
+      "entry": "/buzz/viewBuzz",
+      "path_regex": "/buzz/viewBuzz",
+      "text": "Buzz Newsfeed"
+    }
+  ],
+  "submenus": [
+    {
+      "module": "Admin",
+      "menu": "Job",
+      "child": "Job Titles",
+      "path_regex": "/admin/viewJobTitleList",
+      "heading": "Job Titles"
+    },
+    {
+      "module": "Admin",
+      "menu": "Job",
+      "child": "Pay Grades",
+      "path_regex": "/admin/viewPayGrades",
+      "heading": "Pay Grades"
+    },
+    {
+      "module": "Admin",
+      "menu": "Job",
+      "child": "Employment Status",
+      "path_regex": "/admin/employmentStatus",
+      "heading": "Employment Status"
+    },
+    {
+      "module": "Admin",
+      "menu": "Job",
+      "child": "Job Categories",
+      "path_regex": "/admin/jobCategory",
+      "heading": "Job Categories"
+    },
+    {
+      "module": "Admin",
+      "menu": "Job",
+      "child": "Work Shifts",
+      "path_regex": "/admin/workShift",
+      "heading": "Work Shifts"
+    },
+    {
+      "module": "Admin",
+      "menu": "Organization",
+      "child": "General Information",
+      "path_regex": "/admin/viewOrganizationGeneralInformation",
+      "heading": "General Information"
+    },
+    {
+      "module": "Admin",
+      "menu": "Organization",
+      "child": "Locations",
+      "path_regex": "/admin/viewLocations",
+      "heading": "Locations"
+    },
+    {
+      "module": "Admin",
+      "menu": "Organization",
+      "child": "Structure",
+      "path_regex": "/admin/viewCompanyStructure",
+      "heading": "Organization Structure"
+    },
+    {
+      "module": "Admin",
+      "menu": "Qualifications",
+      "child": "Skills",
+      "path_regex": "/admin/viewSkills",
+      "heading": "Skills"
+    },
+    {
+      "module": "Admin",
+      "menu": "Qualifications",
+      "child": "Education",
+      "path_regex": "/admin/viewEducation",
+      "heading": "Education"
+    },
+    {
+      "module": "Admin",
+      "menu": "Qualifications",
+      "child": "Licenses",
+      "path_regex": "/admin/viewLicenses",
+      "heading": "Licenses"
+    },
+    {
+      "module": "Admin",
+      "menu": "Qualifications",
+      "child": "Languages",
+      "path_regex": "/admin/viewLanguages",
+      "heading": "Languages"
+    },
+    {
+      "module": "Admin",
+      "menu": "Qualifications",
+      "child": "Memberships",
+      "path_regex": "/admin/membership",
+      "heading": "Memberships"
+    },
+    {
+      "module": "Admin",
+      "menu": "Configuration",
+      "child": "Email Configuration",
+      "path_regex": "/admin/listMailConfiguration",
+      "text": "Email Configuration"
+    },
+    {
+      "module": "Admin",
+      "menu": "Configuration",
+      "child": "Email Subscriptions",
+      "path_regex": "/admin/viewEmailNotification",
+      "heading": "Email Subscriptions"
+    },
+    {
+      "module": "Admin",
+      "menu": "Configuration",
+      "child": "Localization",
+      "path_regex": "/admin/localization",
+      "heading": "Localization"
+    },
+    {
+      "module": "Admin",
+      "menu": "Configuration",
+      "child": "Language Packages",
+      "path_regex": "/admin/languagePackage",
+      "heading": "Language Packages"
+    },
+    {
+      "module": "Admin",
+      "menu": "Configuration",
+      "child": "Modules",
+      "path_regex": "/admin/viewModules",
+      "heading": "Module Configuration"
+    },
+    {
+      "module": "Admin",
+      "menu": "Configuration",
+      "child": "Social Media Authentication",
+      "path_regex": "/admin/openIdProvider",
+      "heading": "Provider List"
+    },
+    {
+      "module": "Admin",
+      "menu": "Configuration",
+      "child": "Register OAuth Client",
+      "path_regex": "/admin/registerOAuthClient",
+      "heading": "OAuth Client List"
+    },
+    {
+      "module": "Admin",
+      "menu": "Configuration",
+      "child": "LDAP Configuration",
+      "path_regex": "/admin/ldapConfiguration",
+      "heading": "LDAP Configuration"
+    },
+    {
+      "module": "PIM",
+      "menu": "Configuration",
+      "child": "Optional Fields",
+      "path_regex": "/pim/configurePim",
+      "text": "Optional Fields"
+    },
+    {
+      "module": "PIM",
+      "menu": "Configuration",
+      "child": "Custom Fields",
+      "path_regex": "/pim/listCustomFields",
+      "heading": "Custom Fields"
+    },
+    {
+      "module": "PIM",
+      "menu": "Configuration",
+      "child": "Data Import",
+      "path_regex": "/pim/pimCsvImport",
+      "text": "Data Import"
+    },
+    {
+      "module": "PIM",
+      "menu": "Configuration",
+      "child": "Reporting Methods",
+      "path_regex": "/pim/viewReportingMethods",
+      "text": "Reporting Methods"
+    },
+    {
+      "module": "PIM",
+      "menu": "Configuration",
+      "child": "Termination Reasons",
+      "path_regex": "/pim/viewTerminationReasons",
+      "text": "Termination Reasons"
+    },
+    {
+      "module": "Leave",
+      "menu": "Entitlements",
+      "child": "Add Entitlements",
+      "path_regex": "/leave/addLeaveEntitlement",
+      "text": "Add Leave Entitlement"
+    },
+    {
+      "module": "Leave",
+      "menu": "Entitlements",
+      "child": "Employee Entitlements",
+      "path_regex": "/leave/viewLeaveEntitlements",
+      "heading": "Leave Entitlements"
+    },
+    {
+      "module": "Leave",
+      "menu": "Entitlements",
+      "child": "My Entitlements",
+      "path_regex": "/leave/viewMyLeaveEntitlements",
+      "heading": "My Leave Entitlements"
+    },
+    {
+      "module": "Leave",
+      "menu": "Reports",
+      "child": "Leave Entitlements and Usage Report",
+      "path_regex": "/leave/viewLeaveBalanceReport",
+      "heading": "Leave Entitlements and Usage Report"
+    },
+    {
+      "module": "Leave",
+      "menu": "Reports",
+      "child": "My Leave Entitlements and Usage Report",
+      "path_regex": "/leave/viewMyLeaveBalanceReport",
+      "heading": "My Leave Entitlements and Usage Report"
+    },
+    {
+      "module": "Leave",
+      "menu": "Configure",
+      "child": "Leave Period",
+      "path_regex": "/leave/defineLeavePeriod",
+      "text": "Leave Period"
+    },
+    {
+      "module": "Leave",
+      "menu": "Configure",
+      "child": "Leave Types",
+      "path_regex": "/leave/leaveTypeList",
+      "heading": "Leave Types"
+    },
+    {
+      "module": "Leave",
+      "menu": "Configure",
+      "child": "Work Week",
+      "path_regex": "/leave/defineWorkWeek",
+      "text": "Work Week"
+    },
+    {
+      "module": "Leave",
+      "menu": "Configure",
+      "child": "Holidays",
+      "path_regex": "/leave/viewHolidayList",
+      "heading": "Holidays"
+    },
+    {
+      "module": "Time",
+      "menu": "Timesheets",
+      "child": "My Timesheets",
+      "path_regex": "/time/viewMyTimesheet",
+      "heading": "My Timesheet"
+    },
+    {
+      "module": "Time",
+      "menu": "Timesheets",
+      "child": "Employee Timesheets",
+      "path_regex": "/time/viewEmployeeTimesheet",
+      "heading": "Select Employee"
+    },
+    {
+      "module": "Time",
+      "menu": "Attendance",
+      "child": "My Records",
+      "path_regex": "/attendance/viewMyAttendanceRecord",
+      "heading": "My Attendance Records"
+    },
+    {
+      "module": "Time",
+      "menu": "Attendance",
+      "child": "Punch In/Out",
+      "path_regex": "/attendance/punch(In|Out)",
+      "stateful": "attendance_punch"
+    },
+    {
+      "module": "Time",
+      "menu": "Attendance",
+      "child": "Employee Records",
+      "path_regex": "/attendance/viewAttendanceRecord",
+      "heading": "Employee Attendance Records"
+    },
+    {
+      "module": "Time",
+      "menu": "Attendance",
+      "child": "Configuration",
+      "path_regex": "/attendance/configure",
+      "heading": "Attendance Configuration"
+    },
+    {
+      "module": "Time",
+      "menu": "Reports",
+      "child": "Project Reports",
+      "path_regex": "/time/displayProjectReportCriteria",
+      "heading": "Project Report"
+    },
+    {
+      "module": "Time",
+      "menu": "Reports",
+      "child": "Employee Reports",
+      "path_regex": "/time/displayEmployeeReportCriteria",
+      "heading": "Employee Report"
+    },
+    {
+      "module": "Time",
+      "menu": "Reports",
+      "child": "Attendance Summary",
+      "path_regex": "/time/displayAttendanceSummaryReportCriteria",
+      "heading": "Attendance Total Summary Report"
+    },
+    {
+      "module": "Time",
+      "menu": "Project Info",
+      "child": "Customers",
+      "path_regex": "/time/viewCustomers",
+      "heading": "Customers"
+    },
+    {
+      "module": "Time",
+      "menu": "Project Info",
+      "child": "Projects",
+      "path_regex": "/time/viewProjects",
+      "heading": "Projects"
+    },
+    {
+      "module": "Performance",
+      "menu": "Configure",
+      "child": "KPIs",
+      "path_regex": "/performance/searchKpi",
+      "heading": "Key Performance Indicators for Job Title"
+    },
+    {
+      "module": "Performance",
+      "menu": "Configure",
+      "child": "Trackers",
+      "path_regex": "/performance/viewPerformanceTracker",
+      "heading": "Performance Trackers"
+    },
+    {
+      "module": "Performance",
+      "menu": "Manage Reviews",
+      "child": "Manage Reviews",
+      "path_regex": "/performance/searchPerformanceReview",
+      "heading": "Manage Performance Reviews"
+    },
+    {
+      "module": "Performance",
+      "menu": "Manage Reviews",
+      "child": "My Reviews",
+      "path_regex": "/performance/myPerformanceReview",
+      "heading": "My Reviews"
+    },
+    {
+      "module": "Performance",
+      "menu": "Manage Reviews",
+      "child": "Employee Reviews",
+      "path_regex": "/performance/searchEvaluatePerformanceReview",
+      "heading": "Employee Reviews"
+    },
+    {
+      "module": "Claim",
+      "menu": "Configuration",
+      "child": "Events",
+      "path_regex": "/claim/viewEvents",
+      "heading": "Events"
+    },
+    {
+      "module": "Claim",
+      "menu": "Configuration",
+      "child": "Expense Types",
+      "path_regex": "/claim/viewExpense",
+      "heading": "Expense Types"
+    }
+  ]
+}

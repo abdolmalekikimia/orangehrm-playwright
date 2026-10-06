@@ -1,6 +1,6 @@
 # Shared controls and navigation
 
-**23 scenarios | 3 automated | 20 planned**
+**23 scenarios | 3 automated | 4 partial | 16 planned**
 
 [Plan overview](README.md) | [CSV catalog](scenario-catalog.csv) | [JSON catalog](scenario-catalog.json)
 
@@ -12,21 +12,21 @@ Apply these checks separately to every relevant page in the matrix; one example 
 
 Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
-Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](README.md) also apply. Environment codes: R = read-only demo, I = isolated instance, D = disposable instance.
+Shared controls and [evidence rules](README.md) also apply. R = read-only public demo; I = isolated instance; D = disposable instance. Partial implementations run only their documented public-demo variation, not the complete I/D workflow.
 
 ## Scenario index
 
-| ID | Scenario | Environment | Automation status |
+| ID | Scenario | Design environment | Implementation status |
 |---|---|---|---|
 | [COMMON-001](#common-001) | Initial navigation to Admin | R | Automated |
 | [COMMON-002](#common-002) | Initial navigation to PIM | R | Automated |
 | [COMMON-003](#common-003) | Initial navigation to Directory | R | Automated |
-| [COMMON-004](#common-004) | Every menu and submenu | I | Planned |
-| [COMMON-005](#common-005) | Sidebar search and collapse | I | Planned |
+| [COMMON-004](#common-004) | Every menu and submenu | I | Partial |
+| [COMMON-005](#common-005) | Sidebar search and collapse | I | Partial |
 | [COMMON-006](#common-006) | Account menu and Help | I | Planned |
-| [COMMON-007](#common-007) | Individual filters | I | Planned |
+| [COMMON-007](#common-007) | Individual filters | I | Partial |
 | [COMMON-008](#common-008) | Combined filters | I | Planned |
-| [COMMON-009](#common-009) | Reset and return to the list | I | Planned |
+| [COMMON-009](#common-009) | Reset and return to the list | I | Partial |
 | [COMMON-010](#common-010) | Autocomplete identity selection | I | Planned |
 | [COMMON-011](#common-011) | Sorting | I | Planned |
 | [COMMON-012](#common-012) | Pagination | I | Planned |
@@ -48,7 +48,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Initial navigation to Admin**
 
-**Priority:** P2 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P2 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -56,13 +56,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** The expected route and panel heading appear; returning displays Dashboard.
 
-**Existing test reference:** `tests/test_navigation.py::test_module_navigation[chromium-Admin-/admin/viewSystemUsers-System Users]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_navigation.py::test_module_navigation[chromium-Admin]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### COMMON-002
 
 **Initial navigation to PIM**
 
-**Priority:** P2 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P2 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -70,13 +78,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** The expected route and panel heading appear; returning displays Dashboard.
 
-**Existing test reference:** `tests/test_navigation.py::test_module_navigation[chromium-PIM-/pim/viewEmployeeList-Employee Information]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_navigation.py::test_module_navigation[chromium-PIM]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### COMMON-003
 
 **Initial navigation to Directory**
 
-**Priority:** P2 · **Environment:** R · **Role:** Admin · **Automation:** Implemented in current source
+**Priority:** P2 · **Design environment:** R · **Role:** Admin · **Automation:** Automated for the specified scenario scope
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -84,13 +100,21 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** The expected route and panel heading appear; returning displays Dashboard.
 
-**Existing test reference:** `tests/test_navigation.py::test_module_navigation[chromium-Directory-/directory/viewDirectory-Directory]`
+<details><summary>Implemented variations (1)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_navigation.py::test_module_navigation[chromium-Directory]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | full | Specified scenario scope |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
 
 ### COMMON-004
 
 **Every menu and submenu**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Partially automated; remaining variations are planned
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -98,11 +122,82 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** The corresponding page opens without unexpected errors, empty screens or incorrect headings; role/version-dependent features are recorded separately.
 
+<details><summary>Implemented variations (62)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Job Titles]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Job/Job Titles, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Pay Grades]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Job/Pay Grades, Admin role |
+| [`tests/test_navigation.py::test_module_navigation[chromium-Leave]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave landing page, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Employment Status]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Job/Employment Status, Admin role |
+| [`tests/test_navigation.py::test_module_navigation[chromium-Time]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time landing page, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Job Categories]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Job/Job Categories, Admin role |
+| [`tests/test_navigation.py::test_module_navigation[chromium-Recruitment]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Recruitment landing page, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Work Shifts]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Job/Work Shifts, Admin role |
+| [`tests/test_navigation.py::test_module_navigation[chromium-My-Info]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | My Info landing page, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-General Information]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Organization/General Information, Admin role |
+| [`tests/test_navigation.py::test_module_navigation[chromium-Performance]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Performance landing page, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Locations]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Organization/Locations, Admin role |
+| [`tests/test_navigation.py::test_module_navigation[chromium-Dashboard]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Dashboard landing page, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Structure]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Organization/Structure, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Skills]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Qualifications/Skills, Admin role |
+| [`tests/test_navigation.py::test_module_navigation[chromium-Maintenance]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Maintenance landing page, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Education]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Qualifications/Education, Admin role |
+| [`tests/test_navigation.py::test_module_navigation[chromium-Claim]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Claim landing page, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Licenses]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Qualifications/Licenses, Admin role |
+| [`tests/test_navigation.py::test_module_navigation[chromium-Buzz]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Buzz landing page, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Languages]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Qualifications/Languages, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Memberships]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Qualifications/Memberships, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Email Configuration]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Configuration/Email Configuration, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Email Subscriptions]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Configuration/Email Subscriptions, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Localization]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Configuration/Localization, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Language Packages]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Configuration/Language Packages, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Modules]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Configuration/Modules, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Social Media Authentication]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Configuration/Social Media Authentication, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-Register OAuth Client]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Configuration/Register OAuth Client, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Admin-LDAP Configuration]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Admin/Configuration/LDAP Configuration, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-PIM-Optional Fields]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | PIM/Configuration/Optional Fields, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-PIM-Custom Fields]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | PIM/Configuration/Custom Fields, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-PIM-Data Import]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | PIM/Configuration/Data Import, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-PIM-Reporting Methods]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | PIM/Configuration/Reporting Methods, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-PIM-Termination Reasons]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | PIM/Configuration/Termination Reasons, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Leave-Add Entitlements]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave/Entitlements/Add Entitlements, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Leave-Employee Entitlements]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave/Entitlements/Employee Entitlements, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Leave-My Entitlements]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave/Entitlements/My Entitlements, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Leave-Leave Entitlements and Usage Report]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave/Reports/Leave Entitlements and Usage Report, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Leave-My Leave Entitlements and Usage Report]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave/Reports/My Leave Entitlements and Usage Report, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Leave-Leave Period]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave/Configure/Leave Period, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Leave-Leave Types]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave/Configure/Leave Types, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Leave-Work Week]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave/Configure/Work Week, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Leave-Holidays]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Leave/Configure/Holidays, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-My Timesheets]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Timesheets/My Timesheets, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-Employee Timesheets]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Timesheets/Employee Timesheets, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-My Records]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Attendance/My Records, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-Punch In/Out]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Attendance/Punch In/Out, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-Employee Records]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Attendance/Employee Records, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-Configuration]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Attendance/Configuration, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-Project Reports]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Reports/Project Reports, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-Employee Reports]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Reports/Employee Reports, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-Attendance Summary]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Reports/Attendance Summary, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-Customers]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Project Info/Customers, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Time-Projects]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Time/Project Info/Projects, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Performance-KPIs]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Performance/Configure/KPIs, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Performance-Trackers]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Performance/Configure/Trackers, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Performance-Manage Reviews]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Performance/Manage Reviews/Manage Reviews, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Performance-My Reviews]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Performance/Manage Reviews/My Reviews, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Performance-Employee Reviews]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Performance/Manage Reviews/Employee Reviews, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Claim-Events]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Claim/Configuration/Events, Admin role |
+| [`tests/test_navigation.py::test_submenu_destination[chromium-Claim-Expense Types]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Claim/Configuration/Expense Types, Admin role |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### COMMON-005
 
 **Sidebar search and collapse**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Partially automated; remaining variations are planned
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -110,11 +205,23 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** Matching menus appear; clearing restores the list; collapsing does not disrupt navigation or the active page.
 
+<details><summary>Implemented variations (3)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_navigation.py::test_sidebar_search_and_clear[chromium-full-name]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | sidebar search/reset, Admin role; collapse not yet covered |
+| [`tests/test_navigation.py::test_sidebar_search_and_clear[chromium-partial-name]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | sidebar search/reset, Admin role; collapse not yet covered |
+| [`tests/test_navigation.py::test_sidebar_search_and_clear[chromium-no-match]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | sidebar search/reset, Admin role; collapse not yet covered |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### COMMON-006
 
 **Account menu and Help**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -126,7 +233,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Individual filters**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Partially automated; remaining variations are planned
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -134,11 +241,22 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** All and only matching records appear; a clear empty state is shown when nothing matches.
 
+<details><summary>Implemented variations (2)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_navigation.py::test_unknown_filter_has_empty_result[chromium-Admin-Username]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | unknown exact text value in Admin Username / PIM Employee Id |
+| [`tests/test_navigation.py::test_unknown_filter_has_empty_result[chromium-PIM-Employee Id]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | unknown exact text value in Admin Username / PIM Employee Id |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### COMMON-008
 
 **Combined filters**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -150,7 +268,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Reset and return to the list**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Partially automated; remaining variations are planned
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -158,11 +276,22 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Expected outcome:** Reset restores defaults; filter/page retention on return follows a documented, consistent policy.
 
+<details><summary>Implemented variations (2)</summary>
+
+| Source test | Scope | Implemented variation |
+|---|---|---|
+| [`tests/test_navigation.py::test_reset_clears_text_filter[chromium-Admin-Username]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Reset clears one exact text filter, Admin/PIM; list-return retention not covered |
+| [`tests/test_navigation.py::test_reset_clears_text_filter[chromium-PIM-Employee Id]`](https://github.com/abdolmalekikimia/orangehrm-playwright/blob/main/tests/test_navigation.py) | partial | Reset clears one exact text filter, Admin/PIM; list-return retention not covered |
+
+</details>
+
+Implementation metadata is not a fresh passing execution result.
+
 ### COMMON-010
 
 **Autocomplete identity selection**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -174,7 +303,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Sorting**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -186,7 +315,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Pagination**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -198,7 +327,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Single and bulk selection**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -210,7 +339,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Date filters**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -222,7 +351,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Form persistence and cancellation**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -234,7 +363,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Multilingual text**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -246,7 +375,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Upload and attachment boundaries**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -258,7 +387,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Delete confirmation controls**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -270,7 +399,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Repeated submission and concurrent edits**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -282,7 +411,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Network and service failures**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -294,7 +423,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Keyboard accessibility**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -306,7 +435,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Browser, viewport and zoom**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 
@@ -318,7 +447,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Response-time measurement**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin / ESS / Supervisor · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Authorized account; known fixtures in isolation for deterministic filtering comparisons.
 

@@ -1,6 +1,6 @@
 # Recruitment
 
-**17 scenarios | 0 automated | 17 planned**
+**17 scenarios | 0 automated | 0 partial | 17 planned**
 
 [Plan overview](README.md) | [CSV catalog](scenario-catalog.csv) | [JSON catalog](scenario-catalog.json)
 
@@ -12,11 +12,11 @@ Candidates; Vacancies; application details; hiring workflow.
 
 Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
-Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](README.md) also apply. Environment codes: R = read-only demo, I = isolated instance, D = disposable instance.
+Shared controls and [evidence rules](README.md) also apply. R = read-only public demo; I = isolated instance; D = disposable instance. Partial implementations run only their documented public-demo variation, not the complete I/D workflow.
 
 ## Scenario index
 
-| ID | Scenario | Environment | Automation status |
+| ID | Scenario | Design environment | Implementation status |
 |---|---|---|---|
 | [RECRUIT-001](#recruit-001) | Vacancies: Create and persist | I | Planned |
 | [RECRUIT-002](#recruit-002) | Vacancies: Required fields and boundaries | I | Planned |
@@ -42,7 +42,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Vacancies: Create and persist**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -54,7 +54,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Vacancies: Required fields and boundaries**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -66,7 +66,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Vacancies: Duplicates and normalization**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -78,7 +78,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Vacancies: Edit and cancel**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -90,7 +90,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Vacancies: Delete and dependencies**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -102,7 +102,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Vacancies: filters**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -114,7 +114,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Candidates: valid creation**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -126,7 +126,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Candidates: validation**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -138,7 +138,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Candidates: duplicates**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -150,7 +150,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Candidates: all filters**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -162,7 +162,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Candidate: edit, download and delete**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -174,7 +174,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Shortlist and Reject**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -186,7 +186,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Schedule Interview**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -198,7 +198,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Interview outcome**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -210,7 +210,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Offer and Hire workflow**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -222,7 +222,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **History and concurrent actions**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 
@@ -234,7 +234,7 @@ Shared controls and evidence rules in [COMMON](02-common.md) and the [overview](
 
 **Published Vacancy**
 
-**Priority:** P1 · **Environment:** I · **Role:** Admin · **Automation:** Planned; not implemented or executed as part of this plan
+**Priority:** P1 · **Design environment:** I · **Role:** Admin · **Automation:** Planned; no implemented test
 
 **Prerequisites:** Fully synthetic vacancies/candidates in isolation; emails route to a test mail sink; no real employment decisions.
 

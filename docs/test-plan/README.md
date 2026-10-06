@@ -2,32 +2,32 @@
 
 For the portfolio navigation view, browse the [Test Scenario Wiki](https://github.com/abdolmalekikimia/orangehrm-playwright/wiki). These files and catalogs remain the editable source with the same scenario IDs.
 
-**323 scenarios across all 12 main modules. 10 automated cases; 313 planned scenarios.**
+**323 designed scenarios: 14 automated, 7 partially automated and 302 planned; 97 executable test variations.**
 
-> This is the planned test scope, not a claim of completed automation or full product validation. The current runnable suite remains the 10 login/session/navigation cases described in the project README.
+> Implementation scope and execution outcome are separate. The public-demo suite covers the mapped read-only variations; the remaining workflows require isolated fixtures and approved rules.
 
 Based on OrangeHRM OS 5.9, inspected on **2026-10-05**. Scenario IDs are preserved from the original Persian plan.
 
 ## Browse by area
 
-| Area | Scenarios | Automated | Planned |
-|---|---:|---:|---:|
-| [Authentication and sessions](01-auth.md) | 21 | 7 | 14 |
-| [Shared controls and navigation](02-common.md) | 23 | 3 | 20 |
-| [Admin and configuration](03-admin.md) | 82 | 0 | 82 |
-| [PIM: employees and configuration](04-pim.md) | 24 | 0 | 24 |
-| [My Info and employee details](05-profile.md) | 20 | 0 | 20 |
-| [Leave management](06-leave.md) | 28 | 0 | 28 |
-| [Time and attendance](07-time.md) | 26 | 0 | 26 |
-| [Recruitment](08-recruit.md) | 17 | 0 | 17 |
-| [Performance management](09-perf.md) | 19 | 0 | 19 |
-| [Dashboard](10-dash.md) | 8 | 0 | 8 |
-| [Employee Directory](11-dir.md) | 5 | 0 | 5 |
-| [Maintenance](12-maint.md) | 8 | 0 | 8 |
-| [Claims and expenses](13-claim.md) | 21 | 0 | 21 |
-| [Buzz social feed](14-buzz.md) | 11 | 0 | 11 |
-| [Authorization and cross-module integrity](15-rbac.md) | 10 | 0 | 10 |
-| **Total** | **323** | **10** | **313** |
+| Area | Scenarios | Automated | Partial | Planned |
+|---|---:|---:|---:|---:|
+| [Authentication and sessions](01-auth.md) | 21 | 10 | 3 | 8 |
+| [Shared controls and navigation](02-common.md) | 23 | 3 | 4 | 16 |
+| [Admin and configuration](03-admin.md) | 82 | 0 | 0 | 82 |
+| [PIM: employees and configuration](04-pim.md) | 24 | 0 | 0 | 24 |
+| [My Info and employee details](05-profile.md) | 20 | 0 | 0 | 20 |
+| [Leave management](06-leave.md) | 28 | 0 | 0 | 28 |
+| [Time and attendance](07-time.md) | 26 | 0 | 0 | 26 |
+| [Recruitment](08-recruit.md) | 17 | 0 | 0 | 17 |
+| [Performance management](09-perf.md) | 19 | 0 | 0 | 19 |
+| [Dashboard](10-dash.md) | 8 | 0 | 0 | 8 |
+| [Employee Directory](11-dir.md) | 5 | 0 | 0 | 5 |
+| [Maintenance](12-maint.md) | 8 | 1 | 0 | 7 |
+| [Claims and expenses](13-claim.md) | 21 | 0 | 0 | 21 |
+| [Buzz social feed](14-buzz.md) | 11 | 0 | 0 | 11 |
+| [Authorization and cross-module integrity](15-rbac.md) | 10 | 0 | 0 | 10 |
+| **Total** | **323** | **14** | **7** | **302** |
 
 Each area has a linked scenario index and full prerequisites, steps/data and expected outcomes. Use the [CSV catalog](scenario-catalog.csv) for filtering/import and the [JSON catalog](scenario-catalog.json) for tooling.
 
@@ -62,7 +62,7 @@ Shared navigation/form/table/upload checks are in [COMMON](02-common.md). Cross-
 
 ## Scope and evidence rules
 
-1. This is a scenario plan and automation backlog, not evidence that all features or combinations have been tested. Only the 10 explicitly linked cases currently have automation; 313 remain planned.
+1. This is a scenario plan and automation backlog, not evidence that every feature or combination has been tested. 323 designed scenarios: 14 automated, 7 partially automated and 302 planned; 97 executable test variations. Implementation status is separate from execution outcome.
 2. Inventory basis: read-only inspection of the public OrangeHRM OS 5.9 UI on 2026-10-05 and inspection of the two existing test files. Opening a page or menu does not establish workflow correctness.
 3. R: read-only, suitable for the recruiter demo. I: isolated instance with synthetic data and controlled accounts. D: disposable instance with a restorable snapshot for purge testing. No record mutation, publishing, global configuration change or purge was performed during the inventory review.
 4. P1: authentication, authorization, sensitive data, core workflows and data integrity. P2: existing navigation and secondary capabilities. Review priority against actual risk/roles; automation effort does not determine business importance.
@@ -105,7 +105,7 @@ Shared navigation/form/table/upload checks are in [COMMON](02-common.md). Cross-
 
 ## Suggested implementation order
 
-1. Preserve the existing 10 R cases; extend read-only navigation and nonmutating search coverage for the public demo.
+1. Run the mapped public-demo cases, inspect per-scenario evidence and distinguish full from partial scope.
 2. In I, establish master data and employee/user fixtures; implement CRUD and validation, then Leave/Time/Claim/Recruitment/Performance workflows and role tests.
 3. Add controlled failure, concurrency, upload, accessibility/browser and cross-module checks.
 4. Run D scenarios only in a disposable environment after snapshot/scope confirmation. Never include purge in the default recruiter run.
