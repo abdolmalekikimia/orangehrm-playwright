@@ -105,7 +105,8 @@ def main():
         replacements={s['file']:wiki_url+'/'+wiki_names[s['prefix']] for s in data['sections']}
         replacements.update({'README.md':wiki_url+'/Home','scenario-catalog.csv':repo_url+'/blob/main/docs/test-plan/scenario-catalog.csv','scenario-catalog.json':repo_url+'/blob/main/docs/test-plan/scenario-catalog.json'})
         def wiki_links(text):
-            for old,new in replacements.items():text=text.replace(']('+old+')',']('+new+')')
+            for old,new in replacements.items():
+                text=re.sub(r'\]\(' + re.escape(old) + r'(?=[#)])', lambda match: '](' + new, text)
             return text
         for s in data['sections']:(w/(wiki_names[s['prefix']]+'.md')).write_text(wiki_links((docs/s['file']).read_text(encoding='utf-8')),encoding='utf-8')
         (w/'Automation-Coverage.md').write_text(wiki_links('\n'.join(auto)),encoding='utf-8')
