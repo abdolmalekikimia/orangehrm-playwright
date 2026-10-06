@@ -121,7 +121,37 @@ def main():
             return text
         for s in data['sections']:(w/(wiki_names[s['prefix']]+'.md')).write_text(wiki_links((docs/s['file']).read_text(encoding='utf-8')),encoding='utf-8')
         (w/'Automation-Coverage.md').write_text(add_current_scope(wiki_links('\n'.join(auto))),encoding='utf-8')
-        for name in ('Home','Test-Scenario-Index','Detailed-Test-Cases'):
+        home = ["# OrangeHRM QA Portfolio", "",
+                "A runnable Python/Pytest/Playwright portfolio showing how I plan tests, automate selected public-demo behaviors and review execution evidence. Implementation is AI-assisted. [View the project and source code](" + repo_url + ").", "",
+                "## What this portfolio demonstrates", "",
+                "- **Test planning:** a structured catalog of 323 scenarios across 12 main modules.",
+                "- **Risk-based prioritization:** P1/P2 priorities for authentication, access, workflows and data integrity.",
+                "- **Functional and negative testing:** successful login, invalid credentials, required fields and empty search results.",
+                "- **Authorization testing:** unauthenticated access to protected module entry routes; role-specific permission tests remain planned.",
+                "- **Playwright automation:** executable UI checks mapped to stable scenario IDs.",
+                "- **Page Object Model:** reusable login and navigation interactions.",
+                "- **CI execution:** GitHub Actions with downloadable HTML, JUnit and scenario-result reports.",
+                "- **Evidence-based validation:** observable assertions and retained screenshots/traces for failures.", "",
+                "**Want the details? Browse the [Test Scenario Index](" + wiki_url + "/Test-Scenario-Index).**", "",
+                "## Featured Test Scenarios", "",
+                "These examples highlight session protection, access boundaries, navigation and search behavior. Status describes implemented scope; execution results are recorded separately.", "",
+                "| ID | Scenario | Priority | Status |", "|---|---|---|---|"]
+        for case_id in ('AUTH-006', 'AUTH-017', 'COMMON-004', 'COMMON-007', 'COMMON-009', 'MAINT-001'):
+            case = next(c for c in data['cases'] if c['id'] == case_id)
+            destination = wiki_url + '/' + wiki_names[case['section']] + '#' + case_id.lower()
+            home.append(f"| [{case_id}]({destination}) | {case['title']} | {case['priority']} | {case['status'].title()} |")
+        home += ["", "**Partial** means only the documented variations are implemented. Maintenance coverage here is cancellation of the access gate, not password revalidation or purge.", "",
+                 "## Try it or review the evidence", "",
+                 "- [Run the demo in visible Google Chrome](" + wiki_url + "/Test-Execution).",
+                 "- [Browse CI runs and download reports](" + repo_url + "/actions/workflows/checks.yml).",
+                 "- [Inspect implementation mappings and source references](" + wiki_url + "/Automation-Coverage).", "",
+                 "## Automation at a glance", "", summary, "", coverage_note, "",
+                 "The default suite uses the shared public demo without changing business records or configuration. CRUD, approval workflows and role-specific tests require an isolated instance; purge requires a disposable instance.", "",
+                 "## Explore further", "",
+                 "[Test Strategy](" + wiki_url + "/Test-Strategy) · [Detailed Test Cases](" + wiki_url + "/Detailed-Test-Cases) · [Bug Reports](" + wiki_url + "/Bug-Reports)", "",
+                 "[Repository documentation and catalogs](" + repo_url + "/tree/main/docs/test-plan) preserve the same scenario IDs. Initial UI inventory: OrangeHRM OS 5.9, 2026-10-05. Automation metadata updated: " + args.updated_on + ".", ""]
+        (w/'Home.md').write_text('\n'.join(home), encoding='utf-8')
+        for name in ('Test-Scenario-Index','Detailed-Test-Cases'):
             path=w/(name+'.md')
             if not path.exists():continue
             text=path.read_text(encoding='utf-8')
